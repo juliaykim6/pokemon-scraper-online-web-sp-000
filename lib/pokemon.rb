@@ -10,9 +10,6 @@ attr_accessor :id, :name, :type, :db
     end
     
     def self.save(name, type, db)
-      if self.id 
-        self.update
-      else 
         sql = <<-SQL
         INSERT INTO pokemon (name, type, )
     
