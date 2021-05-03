@@ -14,6 +14,6 @@ attr_accessor :id, :name, :type, :db
         INSERT INTO pokemon (name, type)
         VALUES (?, ?)
         SQL
-        db.execute(sql, self.name, self.type)
-        @id = 
+        db.execute(sql, name, type)
+        @id = DB[:conn].execute()
 end
