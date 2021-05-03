@@ -9,7 +9,7 @@ attr_accessor :id, :name, :type, :db
         @db = db
     end
     
-    def save
+    def self.save
       if self.id 
         self.update
       else 
