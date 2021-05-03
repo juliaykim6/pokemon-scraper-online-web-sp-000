@@ -9,7 +9,13 @@ attr_accessor :id, :name, :type, :db
         @db = db
     end
     
-    
+    def self.new_from_db(row)
+        new_pkmn = self.new
+        new_pkmn.id = row[0]
+        new_pkmn.name = row[1]
+        new_pkmn.type = row[2]
+        new_pkmn
+    end
     
     def self.save(name, type, db)
         sql = <<-SQL
